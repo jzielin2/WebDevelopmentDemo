@@ -18,7 +18,7 @@
 
 	echo "Query is working";
 	echo "Error: " . mysqli_error($conn);
-
+ 
 ?>
 
 </body>
