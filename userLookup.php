@@ -8,10 +8,10 @@
 <div class="container-master">
 	<div class="container-site-header">
 		<h1>Name lookup</h1>
-		<p>Enter your email below and we'll let you know the name currently linked to your account</p>
 	</div>
 
 	<div class="container-account-creation-form">
+		<p>Enter your email below and we'll let you know the name currently linked to your account</p>
 		<form action="userLookup.php" method="post">
 			<input type="text" name="email" placeholder="Enter your Email" /> <br/>
 			<input type="Submit" />
