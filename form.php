@@ -6,35 +6,43 @@
 </head>
 <body>
 
-<h1>Please enter your email and password below to sign up!</h1>
+<div class="container-master">
+	<div class="container-site-header">
+		<h1>Please enter your email and password below to sign up!</h1>
+	</div>
 
-<form action="form.php" method="post">
-	<input type="text" name="email" placeholder="Enter your Email" /> <br/>
-	<input type="Password" name="password" placeholder="Enter your Password" /> <br/>
-	<input type="text" name="name" placeholder="Enter your name" /> <br/>
-	<input type="Submit" />
-</form>
+	<div class="container-account-creation-form">
+		<form action="form.php" method="post">
+			<input type="text" name="email" placeholder="Enter your Email" /> <br/>
+			<input type="Password" name="password" placeholder="Enter your Password" /> <br/>
+			<input type="text" name="name" placeholder="Enter your name" /> <br/>
+			<input type="Submit" />
+		</form>
+	</div>
 
-<?php
+	<div class="container-results">
+		<?php
 
-	if(!isset($_POST["email"]) || !isset($_POST["password"])){}
-	else{
-		$email = $_POST["email"];
-		$password = $_POST["password"];
-		$name = $_POST["name"];
-		$conn = dbConnect();
+			if(!isset($_POST["email"]) || !isset($_POST["password"])){}
+			else{
+				$email = $_POST["email"];
+				$password = $_POST["password"];
+				$name = $_POST["name"];
+				$conn = dbConnect();
 
-		$insertUser = "INSERT INTO userAccountsPlain (email, password, name) VALUES ('$email', '$password', '$name')";
-		
-		if(mysqli_query($conn, $insertUser)){
-			echo "Great - you are now registered with the email " . $email . ". <a href=\"userLookup.php\">Now look up your User ID</a>";
-		}
-		else{
-			echo "Error: " . mysqli_error($conn);
-		}
-	}
+				$insertUser = "INSERT INTO userAccountsPlain (email, password, name) VALUES ('$email', '$password', '$name')";
+				
+				if(mysqli_query($conn, $insertUser)){
+					echo "Great - you are now registered with the email " . $email . ". <a href=\"userLookup.php\">Now look up your User ID</a>";
+				}
+				else{
+					echo "Error: " . mysqli_error($conn);
+				}
+			}
 
-?>
+		?>
+	</div>
+</div>
 
 </body>
 </html>
