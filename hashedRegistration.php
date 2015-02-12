@@ -25,7 +25,7 @@
 		$insertUser = "INSERT INTO userAccountsHashed (email, password) VALUES ('$email', '$password')";
 		
 		if(mysqli_query($conn, $insertUser)){
-			echo "Great - you are now registered with the email " . $email . ". <a href=\"userLookup.php\">Now look up your User ID</a>";
+			echo "Great - you are now registered with the email " . $email . ". <a href=\"hashedUserLookup.php\">Now look up your User ID</a>";
 		}
 		else{
 			echo "Error: " . mysqli_error($conn);
