@@ -1,0 +1,29 @@
+/* Here is a nice guide to formatting text: http://www.w3schools.com/css/css_text.asp */
+
+body{
+	BACKGROUND: white; /* page background color */
+	COLOR: black; /* page font color */
+}
+
+/* CSS for all paragraphs on the page */
+p{
+	width:50%;
+}
+
+/* CSS for only the top paragraph on the page. This will overwrite the general paragraph css above */
+#top-paragraph{
+	border: 1px solid black; /* border for the top paragraph. This sets the thickness of the line, that I want it to be a solid line (not dotted), and sets the color to black */
+	background: limegreen; /* background color of the top */
+	padding: 10px; /* put 10px of padding between the text and the border */
+}
+
+h1{
+	text-decoration:underline;
+	font-weight:bold;
+	color: red;
+	text-align: center; /*center text on page */
+}
+
+h2{
+	margin-top:50px; /* put 50px between me and the thing above me */
+}
